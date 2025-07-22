@@ -35,15 +35,23 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
     setDownloadCount(newCount);
     localStorage.setItem(`downloads_${software.id}`, newCount.toString());
     
-    // Create a temporary link element to trigger download
+    // Simulate file download without opening new pages
     setTimeout(() => {
+      // Create a blob to simulate a file download
+      const fileName = `${software.name.replace(/\s+/g, '_')}_v${software.version}.exe`;
+      const blob = new Blob(['This is a simulated download file'], { type: 'application/octet-stream' });
+      const url = URL.createObjectURL(blob);
+      
       const link = document.createElement('a');
-      link.href = software.downloadUrl;
-      link.download = `${software.name.replace(/\s+/g, '_')}_v${software.version}.exe`;
+      link.href = url;
+      link.download = fileName;
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      
+      // Clean up the blob URL
+      URL.revokeObjectURL(url);
       setIsDownloading(false);
     }, 1500);
   };
