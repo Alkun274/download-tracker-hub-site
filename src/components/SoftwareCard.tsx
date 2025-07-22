@@ -35,11 +35,16 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
     setDownloadCount(newCount);
     localStorage.setItem(`downloads_${software.id}`, newCount.toString());
     
-    // Simulate download
+    // Create a temporary link element to trigger download
     setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = software.downloadUrl;
+      link.download = `${software.name.replace(/\s+/g, '_')}_v${software.version}.exe`;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       setIsDownloading(false);
-      // In a real app, this would trigger the actual download
-      window.open(software.downloadUrl, '_blank');
     }, 1500);
   };
 
