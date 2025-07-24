@@ -67,8 +67,16 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
       <CardHeader className="space-y-3">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg bg-secondary/50 flex items-center justify-center text-2xl">
-              {software.icon}
+            <div className="w-12 h-12 rounded-lg bg-secondary/50 flex items-center justify-center overflow-hidden">
+              {software.icon.startsWith('/') ? (
+                <img 
+                  src={software.icon} 
+                  alt={`${software.name} logo`}
+                  className="w-8 h-8 object-contain"
+                />
+              ) : (
+                <span className="text-2xl">{software.icon}</span>
+              )}
             </div>
             <div>
               <CardTitle className="text-lg group-hover:text-primary transition-colors">
