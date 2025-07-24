@@ -68,14 +68,14 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg bg-secondary/50 flex items-center justify-center overflow-hidden">
-              {software.icon.startsWith('/') ? (
+              {typeof software.icon === 'string' && software.icon.length <= 2 ? (
+                <span className="text-2xl">{software.icon}</span>
+              ) : (
                 <img 
                   src={software.icon} 
                   alt={`${software.name} logo`}
                   className="w-8 h-8 object-contain"
                 />
-              ) : (
-                <span className="text-2xl">{software.icon}</span>
               )}
             </div>
             <div>

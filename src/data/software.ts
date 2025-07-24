@@ -1,3 +1,25 @@
+// Import logo assets
+import chromeLogo from "@/assets/chrome-logo.svg";
+import firefoxLogo from "@/assets/firefox-logo.svg";
+import vscodeLogo from "@/assets/vscode-logo.svg";
+import discordLogo from "@/assets/discord-logo.png";
+import vlcLogo from "@/assets/vlc-logo.png";
+import sevenZipLogo from "@/assets/7zip-logo.png";
+import spotifyLogo from "@/assets/spotify-logo.svg";
+import notionLogo from "@/assets/notion-logo.png";
+import obsLogo from "@/assets/obs-logo.png";
+import gitLogo from "@/assets/git-logo.png";
+import steamLogo from "@/assets/steam-logo.ico";
+import zoomLogo from "@/assets/zoom-logo.ico";
+import skypeLogo from "@/assets/skype-logo.png";
+import teamviewerLogo from "@/assets/teamviewer-logo.png";
+import winrarLogo from "@/assets/winrar-logo.png";
+import photoshopLogo from "@/assets/photoshop-logo.png";
+import officeLogo from "@/assets/office-logo.png";
+import figmaLogo from "@/assets/figma-logo.png";
+import canvaLogo from "@/assets/canva-logo.png";
+import githubLogo from "@/assets/github-logo.svg";
+
 export interface Software {
   id: string;
   name: string;
@@ -19,7 +41,7 @@ export const softwareData: Software[] = [
     version: "120.0.6099",
     size: "95.2 MB",
     downloadUrl: "https://www.google.com/chrome/",
-    icon: "/src/assets/chrome-logo.svg",
+    icon: chromeLogo,
     rating: 4.5
   },
   {
@@ -30,7 +52,7 @@ export const softwareData: Software[] = [
     version: "121.0",
     size: "56.8 MB",
     downloadUrl: "https://www.mozilla.org/firefox/",
-    icon: "/src/assets/firefox-logo.svg",
+    icon: firefoxLogo,
     rating: 4.3
   },
   {
@@ -52,7 +74,7 @@ export const softwareData: Software[] = [
     version: "1.85.1",
     size: "85.1 MB",
     downloadUrl: "https://code.visualstudio.com/",
-    icon: "/src/assets/vscode-logo.svg",
+    icon: vscodeLogo,
     rating: 4.8
   },
   {
@@ -63,7 +85,7 @@ export const softwareData: Software[] = [
     version: "2.43.0",
     size: "51.2 MB",
     downloadUrl: "https://git-scm.com/",
-    icon: "/src/assets/git-logo.png",
+    icon: gitLogo,
     rating: 4.9
   },
   {
@@ -74,7 +96,7 @@ export const softwareData: Software[] = [
     version: "3.3.8",
     size: "147.2 MB",
     downloadUrl: "https://desktop.github.com/",
-    icon: "/src/assets/github-logo.svg",
+    icon: githubLogo,
     rating: 4.6
   },
   {
@@ -85,7 +107,7 @@ export const softwareData: Software[] = [
     version: "1.0.9015",
     size: "123.4 MB",
     downloadUrl: "https://discord.com/",
-    icon: "/src/assets/discord-logo.png",
+    icon: discordLogo,
     rating: 4.4
   },
   {
@@ -96,7 +118,7 @@ export const softwareData: Software[] = [
     version: "5.16.10",
     size: "67.4 MB",
     downloadUrl: "https://zoom.us/",
-    icon: "/src/assets/zoom-logo.ico",
+    icon: zoomLogo,
     rating: 4.1
   },
   {
@@ -107,7 +129,7 @@ export const softwareData: Software[] = [
     version: "8.108.0.212",
     size: "78.3 MB",
     downloadUrl: "https://www.skype.com/",
-    icon: "/src/assets/skype-logo.png",
+    icon: skypeLogo,
     rating: 4.0
   },
   {
@@ -118,7 +140,7 @@ export const softwareData: Software[] = [
     version: "15.47.4",
     size: "45.7 MB",
     downloadUrl: "https://www.teamviewer.com/",
-    icon: "/src/assets/teamviewer-logo.png",
+    icon: teamviewerLogo,
     rating: 4.3
   },
   {
@@ -129,7 +151,7 @@ export const softwareData: Software[] = [
     version: "3.0.20",
     size: "42.1 MB",
     downloadUrl: "https://www.videolan.org/vlc/",
-    icon: "/src/assets/vlc-logo.png",
+    icon: vlcLogo,
     rating: 4.6
   },
   {
@@ -140,7 +162,7 @@ export const softwareData: Software[] = [
     version: "1.2.25.1011",
     size: "156.7 MB",
     downloadUrl: "https://www.spotify.com/",
-    icon: "/src/assets/spotify-logo.svg",
+    icon: spotifyLogo,
     rating: 4.2
   },
   {
@@ -151,7 +173,7 @@ export const softwareData: Software[] = [
     version: "30.0.2",
     size: "124.8 MB",
     downloadUrl: "https://obsproject.com/",
-    icon: "/src/assets/obs-logo.png",
+    icon: obsLogo,
     rating: 4.6
   },
   {
@@ -173,7 +195,7 @@ export const softwareData: Software[] = [
     version: "23.01",
     size: "1.5 MB",
     downloadUrl: "https://www.7-zip.org/",
-    icon: "/src/assets/7zip-logo.png",
+    icon: sevenZipLogo,
     rating: 4.7
   },
   {
@@ -184,7 +206,7 @@ export const softwareData: Software[] = [
     version: "6.24",
     size: "3.2 MB",
     downloadUrl: "https://www.win-rar.com/",
-    icon: "/src/assets/winrar-logo.png",
+    icon: winrarLogo,
     rating: 4.4
   },
   {
@@ -206,7 +228,7 @@ export const softwareData: Software[] = [
     version: "2.1.0",
     size: "89.3 MB",
     downloadUrl: "https://www.notion.so/",
-    icon: "/src/assets/notion-logo.png",
+    icon: notionLogo,
     rating: 4.5
   },
   {
@@ -217,7 +239,7 @@ export const softwareData: Software[] = [
     version: "16.0.17126.20132",
     size: "3.2 GB",
     downloadUrl: "https://www.office.com/",
-    icon: "/src/assets/office-logo.png",
+    icon: officeLogo,
     rating: 4.6
   },
   {
@@ -239,7 +261,7 @@ export const softwareData: Software[] = [
     version: "3.5.17",
     size: "2.1 MB",
     downloadUrl: "https://store.steampowered.com/",
-    icon: "/src/assets/steam-logo.ico",
+    icon: steamLogo,
     rating: 4.4
   },
   {
@@ -272,7 +294,7 @@ export const softwareData: Software[] = [
     version: "25.2.0",
     size: "2.8 GB",
     downloadUrl: "https://www.adobe.com/products/photoshop.html",
-    icon: "/src/assets/photoshop-logo.png",
+    icon: photoshopLogo,
     rating: 4.7
   },
   {
@@ -283,7 +305,7 @@ export const softwareData: Software[] = [
     version: "116.15.4",
     size: "156.2 MB",
     downloadUrl: "https://www.figma.com/downloads/",
-    icon: "/src/assets/figma-logo.png",
+    icon: figmaLogo,
     rating: 4.8
   },
   {
@@ -294,7 +316,7 @@ export const softwareData: Software[] = [
     version: "1.79.0",
     size: "234.1 MB",
     downloadUrl: "https://www.canva.com/download/",
-    icon: "/src/assets/canva-logo.png",
+    icon: canvaLogo,
     rating: 4.6
   }
 ];
