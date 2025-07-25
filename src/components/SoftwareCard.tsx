@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Download, Star } from "lucide-react";
+import { Download, Star, Check, X } from "lucide-react";
 
 interface Software {
   id: string;
@@ -14,6 +14,8 @@ interface Software {
   downloadUrl: string;
   icon: string;
   rating: number;
+  pros: string[];
+  cons: string[];
 }
 
 interface SoftwareCardProps {
@@ -101,6 +103,26 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
       </CardHeader>
       
       <CardContent className="space-y-4">
+        {/* Pros and Cons */}
+        <div className="space-y-2">
+          <div className="space-y-1">
+            {software.pros.map((pro, index) => (
+              <div key={index} className="flex items-center gap-2 text-xs">
+                <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
+                <span className="text-green-600 dark:text-green-400">{pro}</span>
+              </div>
+            ))}
+          </div>
+          <div className="space-y-1">
+            {software.cons.map((con, index) => (
+              <div key={index} className="flex items-center gap-2 text-xs">
+                <X className="w-3 h-3 text-red-500 flex-shrink-0" />
+                <span className="text-red-600 dark:text-red-400">{con}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>Size: {software.size}</span>
           <span className="flex items-center gap-1">
