@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { SoftwareCard } from "@/components/SoftwareCard";
 import { SearchBar } from "@/components/SearchBar";
+import { CookieConsent } from "@/components/CookieConsent";
+import { Footer } from "@/components/Footer";
 import { softwareData, categories } from "@/data/software";
 import { Download, Zap, Shield, Users } from "lucide-react";
 
@@ -99,6 +101,9 @@ const Index = () => {
           )}
         </div>
       </section>
+      
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };
