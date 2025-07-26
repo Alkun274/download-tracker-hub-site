@@ -36,7 +36,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@softhub.com" 
+                  href="mailto:softhub@outlook.sa" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Contact Us

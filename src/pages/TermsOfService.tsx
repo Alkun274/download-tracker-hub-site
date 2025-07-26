@@ -58,7 +58,7 @@ const TermsOfService = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <p className="mb-4">
-              If you have any questions about these Terms of Service, please contact us at legal@softhub.com.
+              If you have any questions about these Terms of Service, please contact us at softhub@outlook.sa.
             </p>
           </section>
         </div>

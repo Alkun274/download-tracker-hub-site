@@ -40,6 +40,19 @@ import xboxLogo from "@/assets/xbox-logo.png";
 import illustratorLogo from "@/assets/illustrator-logo.png";
 import blenderLogo from "@/assets/blender-logo.png";
 import gimpLogo from "@/assets/gimp-logo.png";
+import eclipseLogo from "@/assets/eclipse-logo.png";
+import utorrentLogo from "@/assets/utorrent-logo.png";
+import qbittorrentLogo from "@/assets/qbittorrent-logo.png";
+import potplayerLogo from "@/assets/potplayer-logo.png";
+import kliteLogo from "@/assets/klite-logo.png";
+import nortonLogo from "@/assets/norton-logo.png";
+import mcafeeLogo from "@/assets/mcafee-logo.png";
+import avastLogo from "@/assets/avast-logo.png";
+import kasperskyLogo from "@/assets/kaspersky-logo.png";
+import bitdefenderLogo from "@/assets/bitdefender-logo.png";
+import defenderLogo from "@/assets/defender-logo.png";
+import esetLogo from "@/assets/eset-logo.png";
+import trendmicroLogo from "@/assets/trendmicro-logo.png";
 
 export interface Software {
   id: string;
@@ -265,6 +278,19 @@ export const softwareData: Software[] = [
     cons: ["Can be slow on large projects"]
   },
   {
+    id: "eclipse",
+    name: "Eclipse IDE",
+    description: "Powerful integrated development environment for Java and other programming languages.",
+    category: "Development",
+    version: "2023-12",
+    size: "234.7 MB",
+    downloadUrl: "https://www.eclipse.org/downloads/",
+    icon: eclipseLogo,
+    rating: 4.3,
+    pros: ["Free and open source", "Extensive plugin ecosystem", "Multi-language support"],
+    cons: ["Can be slow with large projects"]
+  },
+  {
     id: "discord",
     name: "Discord",
     description: "Voice, video and text communication service for gaming communities.",
@@ -445,6 +471,58 @@ export const softwareData: Software[] = [
     rating: 4.4,
     pros: ["Customizable interface", "Add-on support", "Cross-platform"],
     cons: ["Setup can be complex"]
+  },
+  {
+    id: "potplayer",
+    name: "PotPlayer",
+    description: "Feature-rich media player with extensive codec support and customization options.",
+    category: "Media",
+    version: "1.7.21564",
+    size: "34.2 MB",
+    downloadUrl: "https://potplayer.daum.net/",
+    icon: potplayerLogo,
+    rating: 4.5,
+    pros: ["Built-in codecs", "Hardware acceleration", "Customizable interface"],
+    cons: ["Windows only"]
+  },
+  {
+    id: "klite",
+    name: "K-Lite Codec Pack",
+    description: "Comprehensive collection of audio and video codecs for Windows media playback.",
+    category: "Media",
+    version: "17.8.5",
+    size: "89.3 MB",
+    downloadUrl: "https://www.codecguide.com/download_kl.htm",
+    icon: kliteLogo,
+    rating: 4.6,
+    pros: ["Comprehensive codec collection", "Easy installation", "Regular updates"],
+    cons: ["Windows only"]
+  },
+  {
+    id: "utorrent",
+    name: "uTorrent",
+    description: "Lightweight BitTorrent client for peer-to-peer file sharing and downloading.",
+    category: "Media",
+    version: "3.6.0",
+    size: "4.2 MB",
+    downloadUrl: "https://www.utorrent.com/",
+    icon: utorrentLogo,
+    rating: 4.0,
+    pros: ["Lightweight and fast", "Simple interface", "Widely supported"],
+    cons: ["Contains ads in free version"]
+  },
+  {
+    id: "qbittorrent",
+    name: "qBittorrent",
+    description: "Free and open-source BitTorrent client with no ads and advanced features.",
+    category: "Media",
+    version: "4.6.2",
+    size: "67.8 MB",
+    downloadUrl: "https://www.qbittorrent.org/download.php",
+    icon: qbittorrentLogo,
+    rating: 4.7,
+    pros: ["No ads", "Open source", "Built-in search engine"],
+    cons: ["Interface less polished than commercial alternatives"]
   },
   {
     id: "7zip",
@@ -861,6 +939,110 @@ export const softwareData: Software[] = [
     rating: 4.6,
     pros: ["Motion graphics leader", "Professional effects", "Adobe integration"],
     cons: ["Very resource intensive"]
+  },
+  {
+    id: "norton",
+    name: "Norton Antivirus",
+    description: "Comprehensive antivirus and security suite with real-time protection.",
+    category: "Security",
+    version: "22.23.5.82",
+    size: "567.8 MB",
+    downloadUrl: "https://norton.com/",
+    icon: nortonLogo,
+    rating: 4.3,
+    pros: ["Strong malware protection", "Identity theft protection", "VPN included"],
+    cons: ["Can slow down system performance"]
+  },
+  {
+    id: "mcafee",
+    name: "McAfee Total Protection",
+    description: "Multi-device antivirus software with firewall and web protection features.",
+    category: "Security",
+    version: "16.0.56",
+    size: "234.6 MB",
+    downloadUrl: "https://www.mcafee.com/",
+    icon: mcafeeLogo,
+    rating: 4.1,
+    pros: ["Multi-device protection", "Web protection", "Password manager"],
+    cons: ["Resource intensive"]
+  },
+  {
+    id: "avast",
+    name: "Avast Free Antivirus",
+    description: "Free antivirus software with real-time protection and Wi-Fi security scanner.",
+    category: "Security",
+    version: "23.11.8753",
+    size: "345.2 MB",
+    downloadUrl: "https://www.avast.com/",
+    icon: avastLogo,
+    rating: 4.2,
+    pros: ["Free version available", "Wi-Fi security scanner", "Browser cleanup"],
+    cons: ["Frequent upgrade prompts"]
+  },
+  {
+    id: "kaspersky",
+    name: "Kaspersky Antivirus",
+    description: "Advanced antivirus solution with behavior-based detection and system optimization.",
+    category: "Security",
+    version: "21.3.10.391",
+    size: "178.9 MB",
+    downloadUrl: "https://www.kaspersky.com/",
+    icon: kasperskyLogo,
+    rating: 4.5,
+    pros: ["Excellent malware detection", "Low system impact", "Advanced threat protection"],
+    cons: ["Limited features in basic version"]
+  },
+  {
+    id: "bitdefender",
+    name: "Bitdefender Antivirus Plus",
+    description: "Lightweight antivirus with advanced threat defense and secure browsing features.",
+    category: "Security",
+    version: "27.0.22.80",
+    size: "234.1 MB",
+    downloadUrl: "https://www.bitdefender.com/",
+    icon: bitdefenderLogo,
+    rating: 4.6,
+    pros: ["Minimal system impact", "Advanced threat defense", "Secure browsing"],
+    cons: ["Interface could be more intuitive"]
+  },
+  {
+    id: "defender",
+    name: "Windows Defender",
+    description: "Built-in Windows antivirus and security solution with real-time protection.",
+    category: "Security",
+    version: "Built-in",
+    size: "Built-in",
+    downloadUrl: "https://www.microsoft.com/windows/comprehensive-security",
+    icon: defenderLogo,
+    rating: 4.2,
+    pros: ["Built into Windows", "No additional cost", "Regular updates"],
+    cons: ["Basic features compared to premium solutions"]
+  },
+  {
+    id: "eset",
+    name: "ESET NOD32 Antivirus",
+    description: "Fast and light antivirus with proactive protection against malware and threats.",
+    category: "Security",
+    version: "16.2.17.0",
+    size: "89.4 MB",
+    downloadUrl: "https://www.eset.com/",
+    icon: esetLogo,
+    rating: 4.4,
+    pros: ["Fast scanning", "Low resource usage", "Proactive protection"],
+    cons: ["Limited additional features"]
+  },
+  {
+    id: "trendmicro",
+    name: "Trend Micro Maximum Security",
+    description: "Complete security suite with antivirus, privacy protection, and parental controls.",
+    category: "Security",
+    version: "17.7.1172",
+    size: "456.7 MB",
+    downloadUrl: "https://www.trendmicro.com/",
+    icon: trendmicroLogo,
+    rating: 4.3,
+    pros: ["Complete security suite", "Parental controls", "Privacy protection"],
+    cons: ["Can be expensive"]
   }
 ];
 
@@ -872,5 +1054,6 @@ export const categories = [
   "Utilities",
   "Productivity",
   "Gaming",
-  "Design"
+  "Design",
+  "Security"
 ];
