@@ -14,7 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      software_versions: {
+        Row: {
+          created_at: string | null
+          download_url: string
+          id: string
+          last_updated: string | null
+          name: string
+          size: string | null
+          version: string
+        }
+        Insert: {
+          created_at?: string | null
+          download_url: string
+          id: string
+          last_updated?: string | null
+          name: string
+          size?: string | null
+          version: string
+        }
+        Update: {
+          created_at?: string | null
+          download_url?: string
+          id?: string
+          last_updated?: string | null
+          name?: string
+          size?: string | null
+          version?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
